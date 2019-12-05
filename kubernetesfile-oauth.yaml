@@ -11,8 +11,8 @@ spec:
   ports:
   - name: http
     protocol: TCP
-    port: 90001                                      
-    targetPort: 90001
+    port: 9001                                      
+    targetPort: 9001
     
 ---
 # DEPOLOYMENT
@@ -46,7 +46,7 @@ spec:
         image: ${IMAGE}
         imagePullPolicy: Always
         ports:
-        - containerPort: 90001
+        - containerPort: 9001
         resources:
           requests:                 # Pod 스케쥴링의 기준. 컨테이너가 요청할 최소한의 리소스에 대한 설정입니다. Spring Boot 애플리케이션의 경우는 메모리 값을 256M 이상으로 설정                                    
             memory: "256Mi"                                                
@@ -103,4 +103,4 @@ spec:
     - destination:
         host: ${APP_NAME}-service.istio-system.svc.cluster.local
         port:
-          number: 90001
+          number: 9001

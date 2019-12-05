@@ -1,0 +1,32 @@
+server:
+  port: 8090
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate: 
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+            
+  datasource:
+    url: jdbc:postgresql://34.66.142.62:5432/postgres
+    username: postgres
+    password: qwe123!!
+    sql-script-encoding: UTF-8
+
+logging:
+  level:
+    org:
+      org:
+        hibernate:
+          SQL: debug
+          type:
+            descriptor:
+              sql:
+                BasicBinder: trace

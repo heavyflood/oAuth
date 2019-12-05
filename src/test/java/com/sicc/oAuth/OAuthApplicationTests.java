@@ -1,4 +1,4 @@
-package com.phs.oAuth;
+package com.sicc.oAuth;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
